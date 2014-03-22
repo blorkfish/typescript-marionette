@@ -1,0 +1,66 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Index</title>
+
+    <link rel="stylesheet" href="../../Content/bootstrap.css" type="text/css" />
+    <link rel="stylesheet" href="../../Content/app.css" type="text/css" />
+
+    <script language="javascript" type="text/javascript" src="../../Scripts/jquery-1.9.1.js"></script>
+    <script language="javascript" type="text/javascript" src="../../Scripts/json2.js"></script>
+    <script language="javascript" type="text/javascript" src="../../Scripts/underscore.js"></script>
+    <script language="javascript" type="text/javascript" src="../../Scripts/backbone.js"></script>
+    <script language="javascript" type="text/javascript" src="../../Scripts/backbone.marionette.js"></script>
+    <script language="javascript" type="text/javascript" src="../../Scripts/bootstrap.js"></script>
+    
+    <script language="javascript" type="text/javascript" src="../../tscode/MarionetteApp.js"></script>
+
+    <script language="javascript" type="text/javascript" src="../../tscode/views/NavBarItemView.js"></script>
+    <script language="javascript" type="text/javascript" src="../../tscode/views/NavBarCollectionView.js"></script>
+    
+    <script language="javascript" type="text/javascript" src="../../tscode/models/NavBarButtonCollection.js"></script>
+    <script language="javascript" type="text/javascript" src="../../tscode/models/NavBarButtonModel.js"></script>
+</head>
+    <body>
+        
+        <div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="app-navbar-text">TypeScript Marionette</div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div id="navbarRegion" class="app-navbar-text">
+                            <p>navbarRegion</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>        
+        
+        <div class="row">
+            <div class="col-lg-12">
+                <h1>Hello Home Controller</h1>    
+            </div>
+        </div>        
+        
+        <script type="text/template" id="navBarItemViewTemplate">
+            <%= Name %>
+        </script>
+        
+        <script type="text/template" id="navBarCollectionViewTemplate">
+        </script>
+
+
+        <script type="text/javascript">
+            var marionetteApp = new MarionetteApp();
+            marionetteApp.start();
+        </script>
+    </body>
+</html>
