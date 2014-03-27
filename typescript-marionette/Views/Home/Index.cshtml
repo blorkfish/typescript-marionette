@@ -26,6 +26,9 @@
     
     <script language="javascript" type="text/javascript" src="../../tscode/models/NavBarButtonCollection.js"></script>
     <script language="javascript" type="text/javascript" src="../../tscode/models/NavBarButtonModel.js"></script>
+    
+    <script language="javascript" type="text/javascript" src="../../tscode/models/UserResultModels.js"></script>
+    <script language="javascript" type="text/javascript" src="../../tscode/views/UserResultViews.js"></script>
 </head>
     <body>
         
@@ -44,17 +47,46 @@
             </div>
         </div>        
         
-        <div class="row">
-            <div class="col-lg-12">
-                <h1>Hello Home Controller</h1>    
+        <div class="container"> @* wrap the row with a container *@ 
+            <div class="row">
+                <div class="col-lg-12">
+                    @*<h1>Hello Home Controller</h1> // old code *@
+                    <div id="userResultRegion"></div> @*  new region  *@
+                </div>
             </div>
-        </div>        
+        </div>
+        
+        @*  new template  *@ 
+        <script type="text/template" id="userResultsViewTemplate">
+            <thead>
+                <tr>
+                    <th>UserName</th>
+                    <th>1</th>
+                    <th>2</th>
+                    <th>3</th>
+                    <th>4</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </script>
+        
+        <script type="text/template" id="userResultItemViewTemplate">
+            <td><%= UserName %></td>
+        </script>
+        
+        <script type="text/template" id="resultItemViewTemplate">
+            <div><%= TotalPoints %></div>
+        </script>
         
         <script type="text/template" id="navBarItemViewTemplate">
             <%= Name %>
         </script>
         
         <script type="text/template" id="navBarCollectionViewTemplate">
+        </script>
+        
+        <script type="text/template" id="userResultsViewTemplate">
+            This is the userResultsViewTemplate.
         </script>
 
 

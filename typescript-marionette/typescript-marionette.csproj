@@ -113,9 +113,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\HomeDataController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\ResultsModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -138,6 +140,7 @@
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jasmine-html.js" />
+    <Content Include="Scripts\jasmine-jquery.js" />
     <Content Include="Scripts\jasmine.js" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
@@ -149,7 +152,10 @@
     <Content Include="Scripts\json2.min.js" />
     <Content Include="Scripts\underscore.js" />
     <Content Include="Scripts\underscore.min.js" />
-    <Content Include="Web.config" />
+    <Content Include="tscode\test\SpecRunner.html" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
@@ -159,10 +165,10 @@
     <Content Include="Views\Web.config" />
     <Content Include="Scripts\jquery-1.9.1.min.map" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="typescript-marionette-ClassDiagram.cd" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
@@ -178,8 +184,11 @@
     <TypeScriptCompile Include="tscode\MarionetteApp.ts" />
     <TypeScriptCompile Include="tscode\models\NavBarButtonCollection.ts" />
     <TypeScriptCompile Include="tscode\models\NavBarButtonModel.ts" />
+    <TypeScriptCompile Include="tscode\models\UserResultModels.ts" />
+    <TypeScriptCompile Include="tscode\test\models\UserResultCollectionTests.ts" />
     <TypeScriptCompile Include="tscode\views\NavBarCollectionView.ts" />
     <TypeScriptCompile Include="tscode\views\NavBarItemView.ts" />
+    <TypeScriptCompile Include="tscode\views\UserResultViews.ts" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

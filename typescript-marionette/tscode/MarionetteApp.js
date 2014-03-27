@@ -14,6 +14,7 @@ var MarionetteApp = (function (_super) {
         _super.call(this);
         this.on("initialize:after", this.initializeAfter);
         this.addRegions({ navbarRegion: "#navbarRegion" });
+        this.addRegions({ userResultRegion: "#userResultRegion" }); // new region
     }
     MarionetteApp.prototype.initializeAfter = function () {
         var navBarButtonCollection = new NavBarButtonCollection([
@@ -21,14 +22,16 @@ var MarionetteApp = (function (_super) {
             { Name: "About", Id: 2 },
             { Name: "Contact Us", Id: 3 }
         ]);
-
         var navBarView = new NavBarCollectionView({ collection: navBarButtonCollection });
-
         navBarView.on("itemview:navbar:clicked", this.navBarButtonClicked);
-
         this.navbarRegion.show(navBarView);
-    };
 
+        var userResultCollection = new UserResultCollection();
+        userResultCollection.fetch({ async: false });
+
+        var userResultView = new UserResultsView({ collection: userResultCollection });
+        this.userResultRegion.show(userResultView);
+    };
     MarionetteApp.prototype.navBarButtonClicked = function (itemView, buttonId) {
         alert('Marionette.App handled NavBarItemView clicked with id :' + buttonId);
     };

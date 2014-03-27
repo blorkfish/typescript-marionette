@@ -8,5 +8,6 @@ class NavBarButtonCollection extends Backbone.Collection {
     constructor(options?: any) {
         super(options);
         this.model = NavBarButtonModel;
+        this.url = "/api/navbars";
     }
 }

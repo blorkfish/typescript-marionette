@@ -14,6 +14,7 @@ var NavBarButtonCollection = (function (_super) {
     function NavBarButtonCollection(options) {
         _super.call(this, options);
         this.model = NavBarButtonModel;
+        this.url = "/api/navbars";
     }
     return NavBarButtonCollection;
 })(Backbone.Collection);
